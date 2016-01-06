@@ -1,0 +1,10 @@
+--- gnetlist/src/parsecmd.c.orig	2016-01-06 00:15:05.000000000 +0000
++++ gnetlist/src/parsecmd.c	2016-01-06 00:15:25.000000000 +0000
+@@ -160,7 +160,6 @@
+       break;
+ 
+     case 'q':
+-      backend_params = g_slist_append(backend_params, "quiet_mode");
+       quiet_mode = TRUE;
+       break;
+ 
