@@ -4,15 +4,9 @@
 
 EAPI=5
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://git.openezx.org/dfu-util.git"
-	inherit autotools git-2
-	SRC_URI=""
-	#KEYWORDS=""
-else
-	SRC_URI="http://dfu-util.gnumonks.org/releases/${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
-fi
+EGIT_REPO_URI="git://git.code.sf.net/p/dfu-util/dfu-util"
+inherit autotools git-2
+SRC_URI=""
 
 DESCRIPTION="implements the Host (PC) side of the USB DFU (Device Firmware Upgrade) protocol"
 HOMEPAGE="http://wiki.openmoko.org/wiki/Dfu-util"
@@ -26,9 +20,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	if [[ ${PV} == "9999" ]] ; then
-		eautoreconf
-	fi
+	eautoreconf
 	sed -i '/^bin_PROGRAMS/s:dfu-util_static[^ ]*::' src/Makefile.in
 }
 
