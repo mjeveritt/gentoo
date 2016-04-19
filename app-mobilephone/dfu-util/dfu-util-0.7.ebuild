@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 SRC_URI="http://dfu-util.gnumonks.org/releases/${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
@@ -17,7 +17,4 @@ RDEPEND="virtual/libusb:1"
 DEPEND="${RDEPEND}
 		virtual/pkgconfig"
 
-src_install() {
-	emake DESTDIR="${D}" install
-	dodoc ChangeLog README TODO
-}
+DOCS=( ChangeLog README TODO )
