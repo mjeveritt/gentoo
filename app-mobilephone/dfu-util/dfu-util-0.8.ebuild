@@ -4,7 +4,7 @@
 
 EAPI=6
 
-SRC_URI="http://dfu-util.gnumonks.org/releases/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="implements the Host (PC) side of the USB DFU (Device Firmware Upgrade) protocol"
