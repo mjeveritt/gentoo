@@ -37,7 +37,6 @@ RDEPEND="dev-libs/openssl:0
 		virtual/libintl"
 
 DEPEND="${RDEPEND}
-	sys-devel/gettext
 	doc? ( app-doc/doxygen[dot] )
 	test? ( dev-libs/libgcrypt:0
 		dev-qt/qttest:5
@@ -62,11 +61,11 @@ src_configure() {
 src_compile() {
 	emake
 	if use doc; then
-		cd doc || die
+		cd "${S}"/doc || die
 		doxygen || die
 	fi
 	if use test; then
-		cd test || die
+		cd "${S}"/test || die
 		emake
 	fi
 }
