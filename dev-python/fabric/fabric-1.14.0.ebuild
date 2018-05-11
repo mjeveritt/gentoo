@@ -71,5 +71,5 @@ python_test() {
 python_install_all() {
 	use doc && local HTML_DOCS=( sites/docs/html/. )
 	distutils-r1_python_install_all
-	newbashcomp "${DISTDIR}"/${P}-completion.bash  ${PN}
+	newbashcomp "${DISTDIR}"/${P}-completion.bash fab
 }
