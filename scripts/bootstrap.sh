@@ -68,9 +68,10 @@ usage() {
 	echo -e "  ${GOOD}--fetchonly (-f)${NORMAL} Just download all the source files"
 	echo -e "  ${GOOD}--info (-i)${NORMAL}      Show system related information"
 	echo -e "  ${GOOD}--pretend (-p)${NORMAL}   Display the packages that will be merged"
-	echo -e "  ${GOOD}--quiet (-q)${NORMAL}     Reduced or condensed output from portage's displays."
+	echo -e "  ${GOOD}--quiet (-q)${NORMAL}     Reduced or condensed output from portage"
 	echo -e "  ${GOOD}--tree (-t)${NORMAL}      Display the dependency tree, forces -p"
 	echo -e "  ${GOOD}--resume (-r)${NORMAL}    Build/use binary packages"
+	echo -e "  ${GOOD}--verbose (-v)${NORMAL}   Verbose output from portage"
 }
 
 STRAP_EMERGE_OPTS="--oneshot"
