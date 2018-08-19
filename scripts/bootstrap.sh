@@ -94,7 +94,7 @@ for opt in "$@" ; do
 		--quiet|-q)   STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -q"     ; unset STRAP_RUN ;;
 		--tree|-t)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p -t"  ; unset STRAP_RUN ;;
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
-		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
+		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"     ; V_ECHO=v_echo;;
 		--version|-V)
 			einfo "Gentoo Linux bootstrap ${cvsver}"
 			exit 0
@@ -359,7 +359,7 @@ if [[ -n ${STRAP_RUN} ]] ; then
 	echo -------------------------------------------------------------------------------
 	einfo "Please note that you should now add the '-e' option for emerge system:"
 	echo
-	einfo "  # emerge -e system"
+	einfo "  # emerge <other_opts> -e system"
 	echo
 fi
 
